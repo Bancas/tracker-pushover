@@ -14,6 +14,3 @@ docker run --rm \
 -e PUSHOVER_USER=<Pushover User Token> \
 bancas/tracker-pushover
 ```
-
-# GitHub
-https://github.com/Bancas/tracker-pushover
