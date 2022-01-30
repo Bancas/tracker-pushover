@@ -1,16 +1,26 @@
 # Private Tracker Pushover Notifications
-Sends Pushover notifications for various user events on private trackers.
+Sends Pushover notifications for various events on private torrent trackers.
 
-Currently works with GGn and RED.
+## Current use cases:
+GGn: 
+    - Sitewide Free Leech Notification
+    - Unread Message Notification
+    - Downloads User Stats JSON
+RED: 
+    - Unread Message Notification
+    - New Unread Official Invite Thread Notification
 
-# Run Command
+## Configuration
+Replace the API tokens in tracker-pushover.py before running.
 ```
-docker run --rm \
---name tracker-pushover \
--e GGN_PUSH_TOKEN=<GGn Pushover App Token> \
--e GGN_API_TOKEN=<GGn API Token> \
--e RED_PUSH_TOKEN=<RED Pushover App Token> \
--e RED_API_TOKEN=<RED API Token> \
--e PUSHOVER_USER=<Pushover User Token> \
-bancas/tracker-pushover
+ggnPushToken = "<GGn Pushover App Token>"
+ggnAPIToken = "<GGn API Token>"
+redPushToken = "<RED Pushover App Token>"
+redAPIToken = "<RED API Token>"
+pushoverUser = "<Pushover User Token>"
+```
+
+## Run Command
+```
+python3 tracker-pushover.py
 ```
